@@ -1,13 +1,15 @@
 casa = float(input("Qual o valor da casa?: "))
 salario = float(input("Qual o seu salario: "))
-anos = int(input("Em quantos anos pretende pagar: "))
-anual = anos / casa
-meses = anual / 12 
-percetual_salario = salario * 0.3
-prestacao = meses / casa
+anos = int(input("Em quantos anos pretende pagar: ")) 
 
-if prestacao <= percetual_salario: 
-    print("prestacao aprovada")
+percetual_salario = salario * 0.3
+meses = anos * 12 
+prestacao_mensal = casa / meses 
+
+if prestacao_mensal > percetual_salario:
+    print("emprestimo negado")
+
 else:
-    print("prestacao negada")
+    print(f"Parabens, voce teve o emprestimo aprovado")
+
     
