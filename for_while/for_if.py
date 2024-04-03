@@ -1,13 +1,18 @@
 from random import randint
 
-aleatorio = randint(0,5)
-maquina = 0
-usuario = 0 
+maquina = usuario = 0
 
-for elemento in range (1,11):
-    numero = int(input(f"{elemento} rodada, digite um numero: "))
-    print("Voce acertou")
-    usuario = usuario + 1
+for elemento in range(1,10):
+    
+    escolha_maquina = randint (0,5)
+    print(escolha_maquina)
+    escolha_Usuario = int(input(f"{elemento}° rodada, digite um numero: "))
+    
+    if escolha_maquina == escolha_Usuario:
+        usuario = usuario + 1 
+        print("usuario venceu")
+    else:
+        maquina = maquina + 1
+        print("maquina venceu")
 else:
-    print("voce errou")
-    maquina = maquina + 1
+    print(f"voce acertou {usuario}")       
