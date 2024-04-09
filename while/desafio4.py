@@ -23,7 +23,6 @@ while True:
     # ganhando da maquina
     ganhando_par = escolha_numero_par + lista 
     
-    if ganhando_par:
-         
-         
-    
+    if ganhando_par % 2:
+        par = 0
+        print(ganhando_par, "resultado par" )
